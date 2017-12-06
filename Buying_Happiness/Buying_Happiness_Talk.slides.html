@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11854,7 +11854,8 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11870,7 +11871,8 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11879,31 +11881,8 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-Learning">Machine Learning<a class="anchor-link" href="#Machine-Learning">&#182;</a></h1><ul>
-<li>Gathers insight on models from other models and from data</li>
-<li>You can learn a style of trading from past sets of trades</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Use data to come up with a new style of trading</li>
-<li>Unstructured data as a source of insight</li>
-</ul>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11915,7 +11894,8 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11923,20 +11903,22 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Stopwords</li>
-<li>Tokenization</li>
 <li>Stemming</li>
+<li>Tokenization</li>
 </ul>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11944,7 +11926,8 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11952,7 +11935,8 @@ a.anchor-link {
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11978,9 +11962,7 @@ a.anchor-link {
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[13]:</div>
-
 
 
 
@@ -11994,7 +11976,8 @@ a.anchor-link {
 </div>
 
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12007,7 +11990,9 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">my_phrases</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">phrase</span> 
+ <span class="ow">in</span> <span class="n">my_phrases</span> <span class="k">for</span> <span class="n">word</span>
+     <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])]</span>
 </pre></div>
 
 </div>
@@ -12019,9 +12004,7 @@ a.anchor-link {
 
 
 <div class="output_area">
-
 <div class="prompt output_prompt">Out[10]:</div>
-
 
 
 
@@ -12039,7 +12022,8 @@ a.anchor-link {
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12049,10 +12033,10 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;bless&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;sad&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12064,42 +12048,44 @@ a.anchor-link {
 
 
 <div class="output_area">
+<div class="prompt"></div>
 
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([ 2.62551141,  0.4847329 ,  0.45857674,  0.78889996, -0.43683404,
-       -0.53521132, -0.42866716, -0.97290128,  4.26054811,  0.16179222,
-       -1.51473927, -0.67379916,  0.91109943, -0.52419966, -0.58900422,
-       -0.64030105,  0.51280391, -1.69713056,  3.31448555,  1.11600494,
-       -0.79634368, -0.33716959, -0.69943726,  1.17677033,  1.7335273 ,
-        0.51291114, -0.14284545,  1.29976273,  1.54217029, -0.62447971,
-       -2.48501277, -1.00985312, -1.52342713, -1.05349064, -1.50105405,
-       -0.53860253, -1.22803974,  3.16734791, -0.75309408,  1.87978327,
-       -2.15208626,  0.48014098,  2.36944318,  1.19643748, -1.07344544,
-       -0.713144  , -1.06406701, -0.78677535,  0.01792815,  1.49741733,
-        0.26484376, -1.14412224,  0.44056687,  1.39928448, -1.02806461,
-       -0.95280224, -1.12010801, -0.4622038 ,  4.02090597, -1.2571429 ,
-        1.50985861, -1.4511081 , -1.14850509, -0.05078466, -1.58439875,
-        1.1981262 , -2.02171135, -2.81897902, -1.1634382 ,  0.04407097,
-       -0.79309672,  4.74057817, -2.21514225, -2.09112597,  0.22909014,
-        1.85296142,  0.40679726,  2.42947268, -3.21426964, -1.52643561,
-       -0.62403005, -0.0136863 , -3.01718664,  1.78197658,  1.49823368,
-        1.90730059, -0.13810879, -0.42983153, -2.03577447, -0.90045542,
-        0.55186057, -1.83319104, -0.95176637, -1.99936867,  1.40097189,
-       -3.14594722,  1.79646266,  0.15805981,  0.44660708,  0.67468214], dtype=float32)</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ -1.89863455e+00  -1.54665136e+00  -2.23204970e+00  -1.30877733e+00
+  -2.30061579e+00  -1.70134628e+00   1.83337653e+00  -2.08741140e+00
+   3.23724604e+00   1.26184821e+00  -9.99662220e-01  -4.37552959e-01
+   4.40503418e-01   1.19143569e+00  -2.29179478e+00  -1.86814177e+00
+   3.11535645e+00   1.62474096e+00   2.66866231e+00   2.83645630e+00
+  -1.28488052e+00   1.35040748e+00   1.01865172e+00  -4.80658680e-01
+   4.23388511e-01  -1.65452003e+00   9.91536558e-01   2.40602851e+00
+  -7.76076317e-01   1.94842303e+00   7.72831738e-01   7.38338292e-01
+  -2.83442521e+00   6.60653114e-01   1.49878132e+00   6.51400387e-01
+  -2.40639806e+00  -1.07167780e+00  -1.02165806e+00   9.60173905e-01
+   2.21353650e+00  -1.42129743e+00  -9.27708030e-01  -3.88164580e-01
+   1.46669912e+00   8.52385104e-01   5.12198329e-01  -4.31529015e-01
+   2.94047624e-01   1.53495061e+00   2.58021164e+00  -5.14630191e-02
+  -1.65423024e+00   1.98876739e+00  -3.05596733e+00   4.68582273e-01
+  -7.30318785e-01  -2.12546796e-01   2.40485692e+00   2.02279878e+00
+   1.17719293e+00   2.86357617e+00   7.22466826e-01   2.82972664e-01
+  -7.58317888e-01   3.47945952e+00   3.73739266e+00   1.42169583e+00
+  -7.90117681e-01   1.84042037e+00   1.98835433e+00   1.78161597e+00
+   2.36412417e-03  -4.24685836e-01  -1.56673503e+00   1.27409828e+00
+  -7.06087649e-01   5.39561808e-01  -2.57677864e-02  -2.28654718e+00
+  -1.61694837e+00   1.12416410e+00   1.56511533e+00   9.97117162e-01
+  -1.62680793e+00  -5.11504531e-01   2.35140419e+00   2.85187773e-02
+   9.96020317e-01   2.01621875e-01  -2.27278137e+00  -8.56919646e-01
+  -1.24364936e+00   1.93653297e+00  -1.74209273e+00  -2.66480112e+00
+  -1.75437510e+00  -2.04358786e-01  -3.64142150e-01   2.14454412e+00]
+</pre>
 </div>
-
 </div>
 
 </div>
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12109,10 +12095,10 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;bless&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;sad&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12124,23 +12110,21 @@ a.anchor-link {
 
 
 <div class="output_area">
-
-<div class="prompt output_prompt">Out[22]:</div>
-
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;prais&#39;, 0.632722020149231),
- (&#39;prayer&#39;, 0.5398192405700684),
- (&#39;grate&#39;, 0.5342082977294922),
- (&#39;thank&#39;, 0.5135688185691833),
- (&#39;pray&#39;, 0.4962601065635681),
- (&#39;xoxo&#39;, 0.47532156109809875),
- (&#39;humbl&#39;, 0.47377634048461914),
- (&#39;faith&#39;, 0.4691312313079834),
- (&#39;safe&#39;, 0.4633764922618866),
- (&#39;inspir&#39;, 0.456495463848114)]</pre>
+<pre>[(&#39;upset&#39;, 0.815515398979187),
+ (&#39;depress&#39;, 0.7984983921051025),
+ (&#39;bum&#39;, 0.7161489725112915),
+ (&#39;devast&#39;, 0.7080429792404175),
+ (&#39;disappoint&#39;, 0.6943762302398682),
+ (&#39;angri&#39;, 0.658515453338623),
+ (&#39;sadd&#39;, 0.6404643058776855),
+ (&#39;embarrass&#39;, 0.6364743709564209),
+ (&#39;gut&#39;, 0.6311415433883667),
+ (&#39;unhappi&#39;, 0.6310410499572754)]</pre>
 </div>
 
 </div>
@@ -12149,7 +12133,8 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12157,7 +12142,8 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12165,7 +12151,8 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12176,7 +12163,8 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12184,7 +12172,8 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12195,7 +12184,8 @@ a.anchor-link {
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12206,7 +12196,8 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12214,18 +12205,20 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 \begin{eqnarray}
-g(X) &amp;=&amp; \alpha + \beta_0 X_0 + \cdots + \beta_n X_N \\
-F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
+g(X) &=& \alpha + \beta_0 X_0 + \cdots + \beta_n X_N \\
+F(X) &=& \frac{1}{1 + e^{-g(X)}}
 \end{eqnarray}
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12237,7 +12230,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12245,7 +12239,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12254,7 +12249,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12263,7 +12259,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12271,7 +12268,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12281,7 +12279,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12289,7 +12288,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12299,7 +12299,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12307,7 +12308,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12317,7 +12319,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12332,7 +12335,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12340,7 +12344,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12350,7 +12355,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12367,12 +12373,19 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">MAX_WORDS</span><span class="p">,))</span>
+<span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">max_features</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                            <span class="n">embedding_dim</span><span class="p">,</span>
+                            <span class="n">input_length</span><span class="o">=</span><span class="n">MAX_WORDS</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span>
                   <span class="n">dropout</span><span class="o">=</span><span class="n">DROPOUT</span><span class="p">,</span>
-                  <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
+                  <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">,</span>
+                  <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">embedding_layer</span><span class="p">)</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span>
                   <span class="n">dropout</span><span class="o">=</span><span class="n">DROPOUT</span><span class="p">,</span>
                   <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">)(</span><span class="n">lstm_layer</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span>
+               <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">,</span>
+               <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sentiment&#39;</span><span class="p">)(</span><span class="n">lstm_layer</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12380,7 +12393,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12388,7 +12402,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12398,7 +12413,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12408,7 +12424,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12419,7 +12436,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12427,7 +12445,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12443,7 +12462,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12459,7 +12479,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12475,7 +12496,8 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12492,7 +12514,8 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12501,7 +12524,8 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12509,8 +12533,9 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12518,8 +12543,9 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12528,15 +12554,17 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Risk-Analysis">Risk Analysis<a class="anchor-link" href="#Risk-Analysis">&#182;</a></h2>
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12544,16 +12572,18 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Returns-Breakdown">Returns Breakdown<a class="anchor-link" href="#Returns-Breakdown">&#182;</a></h2>
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12561,8 +12591,18 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 
 </div>
 </div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Returns-Breakdown">Returns Breakdown<a class="anchor-link" href="#Returns-Breakdown">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12571,23 +12611,29 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#182;</a></h2><ul>
+<h2 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#182;</a></h2><h3 id="Sentiment-Model">Sentiment Model<a class="anchor-link" href="#Sentiment-Model">&#182;</a></h3><ul>
 <li>Lemmatization instead of Stemming</li>
 <li>Sense2Vec</li>
+</ul>
+<h3 id="The-Signal">The Signal<a class="anchor-link" href="#The-Signal">&#182;</a></h3><ul>
+<li>Smarter smoothing methodology than moving average</li>
 </ul>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Tools">Tools<a class="anchor-link" href="#Tools">&#182;</a></h2><ul>
+<li>Natural Language Toolkit (NLTK): <a href="http://www.nltk.org/">http://www.nltk.org/</a></li>
 <li>scikit-learn: <a href="https://github.com/scikit-learn/scikit-learn">https://github.com/scikit-learn/scikit-learn</a></li>
 <li>Gensim: <a href="https://github.com/RaRe-Technologies/gensim">https://github.com/RaRe-Technologies/gensim</a></li>
 <li>Keras: <a href="https://github.com/fchollet/keras">https://github.com/fchollet/keras</a></li>
@@ -12598,14 +12644,6 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 <li>Quantopian Research: <a href="https://www.quantopian.com/research">https://www.quantopian.com/research</a></li>
 <li>Quantopian Lecture Series: <a href="https://www.quantopian.com/lectures">https://www.quantopian.com/lectures</a></li>
 </ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="References">References<a class="anchor-link" href="#References">&#182;</a></h1><ul>
 <li>Go, A., Bhayani, R. and Huang, L., 2009. Twitter sentiment classification using distant supervision. CS224N Project Report, Stanford, 1(2009), p.12.<ul>
 <li><a href="http://www.sentiment140.com/">http://www.sentiment140.com/</a></li>
@@ -12616,7 +12654,8 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12633,7 +12672,8 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
