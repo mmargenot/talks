@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.css">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,19 +24,19 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/pdf.css';
+        link.href = 'reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/html5shiv.js"></script>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11854,8 +11854,7 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11871,8 +11870,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11881,12 +11879,11 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What-is-an-Alpha-Factor?">What is an Alpha Factor?<a class="anchor-link" href="#What-is-an-Alpha-Factor?">&#182;</a></h2><ul>
+<h2 id="What-is-an-Alpha-Factor?">What is an Alpha Factor?<a class="anchor-link" href="#What-is-an-Alpha-Factor?">&#194;&#182;</a></h2><ul>
 <li>Also known as a Risk Factor</li>
 <li>Alternative risk premium</li>
 </ul>
@@ -11894,12 +11891,11 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Popularity-of-Factor-Models">Popularity of Factor Models<a class="anchor-link" href="#Popularity-of-Factor-Models">&#182;</a></h2><ul>
+<h2 id="Popularity-of-Factor-Models">Popularity of Factor Models<a class="anchor-link" href="#Popularity-of-Factor-Models">&#194;&#182;</a></h2><ul>
 <li>"Smart Beta"</li>
 <li>Diversify with specific premia</li>
 <li>Analyze risk</li>
@@ -11909,8 +11905,7 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11924,12 +11919,11 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Constructing-a-Factor-Model">Constructing a Factor Model<a class="anchor-link" href="#Constructing-a-Factor-Model">&#182;</a></h2><ul>
+<h2 id="Constructing-a-Factor-Model">Constructing a Factor Model<a class="anchor-link" href="#Constructing-a-Factor-Model">&#194;&#182;</a></h2><ul>
 <li>CAPM</li>
 </ul>
 $$ r_p = \alpha + \beta_{m} r_{m} $$<ul>
@@ -11942,12 +11936,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Using-a-Factor-Model">Using a Factor Model<a class="anchor-link" href="#Using-a-Factor-Model">&#182;</a></h2><ul>
+<h2 id="Using-a-Factor-Model">Using a Factor Model<a class="anchor-link" href="#Using-a-Factor-Model">&#194;&#182;</a></h2><ul>
 <li>A few different ways to do this, once you have decided on your factors</li>
 <li>Compute exposures to your factor</li>
 <li>Use the exposures to create your portfolio</li>
@@ -11956,12 +11949,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Main-Factors">Main Factors<a class="anchor-link" href="#Main-Factors">&#182;</a></h2><ul>
+<h2 id="Main-Factors">Main Factors<a class="anchor-link" href="#Main-Factors">&#194;&#182;</a></h2><ul>
 <li>Value</li>
 <li>Momentum</li>
 <li>Quality</li>
@@ -11972,12 +11964,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Method">The Method<a class="anchor-link" href="#The-Method">&#182;</a></h2><ul>
+<h2 id="The-Method">The Method<a class="anchor-link" href="#The-Method">&#194;&#182;</a></h2><ul>
 <li>Long-short Equity<ul>
 <li>Rank all securities in your universe from lowest factor exposure to highest</li>
 <li>Go long on the top percentile</li>
@@ -11989,12 +11980,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Universe">The Universe<a class="anchor-link" href="#The-Universe">&#182;</a></h2><ul>
+<h2 id="The-Universe">The Universe<a class="anchor-link" href="#The-Universe">&#194;&#182;</a></h2><ul>
 <li>Sufficient liquidity<ul>
 <li>No "hard-to-trade" securities</li>
 </ul>
@@ -12017,8 +12007,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12029,12 +12018,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Point">The Point<a class="anchor-link" href="#The-Point">&#182;</a></h2><ul>
+<h2 id="The-Point">The Point<a class="anchor-link" href="#The-Point">&#194;&#182;</a></h2><ul>
 <li>Predicting prices is hard</li>
 <li>Trying to capture the relative value of the long and short baskets</li>
 <li>Assuming that expected return of each security in the universe in proportional to factor value</li>
@@ -12043,12 +12031,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#182;</a></h2>
+<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#194;&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
@@ -12073,62 +12060,56 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#182;</a></h2><p><img src="./images/momentum_factor.png" alt="Momentum Factor" style="width: 800px;"/></p>
+<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#194;&#182;</a></h2><p><img src="./images/momentum_factor.png" alt="Momentum Factor" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#182;</a></h2><p><img src="./images/momentum_factor_curve.png" alt="Momentum Factor" style="width: 800px;"/></p>
+<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#194;&#182;</a></h2><p><img src="./images/momentum_factor_curve.png" alt="Momentum Factor" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#182;</a></h2><p><img src="./images/momentum_factor_fingers.png" alt="Momentum Factor" style="width: 800px;"/></p>
+<h2 id="Example-Factor:-Momentum">Example Factor: Momentum<a class="anchor-link" href="#Example-Factor:-Momentum">&#194;&#182;</a></h2><p><img src="./images/momentum_factor_fingers.png" alt="Momentum Factor" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Other-Factors-in-the-Model">Other Factors in the Model<a class="anchor-link" href="#Other-Factors-in-the-Model">&#182;</a></h2><p><img src="./images/many_curves.png" alt="Other Factors" style="width: 1500px;"/></p>
+<h2 id="Other-Factors-in-the-Model">Other Factors in the Model<a class="anchor-link" href="#Other-Factors-in-the-Model">&#194;&#182;</a></h2><p><img src="./images/many_curves.png" alt="Other Factors" style="width: 1500px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Workflow">Workflow<a class="anchor-link" href="#Workflow">&#182;</a></h2><p><img src="./images/quant_workflow.png" alt="Quant Equity Workflow" style="width: 800px;"/></p>
+<h2 id="Workflow">Workflow<a class="anchor-link" href="#Workflow">&#194;&#182;</a></h2><p><img src="./images/quant_workflow.png" alt="Quant Equity Workflow" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Factor-Aggregation">Factor Aggregation<a class="anchor-link" href="#Factor-Aggregation">&#182;</a></h2><ul>
+<h2 id="Factor-Aggregation">Factor Aggregation<a class="anchor-link" href="#Factor-Aggregation">&#194;&#182;</a></h2><ul>
 <li>Factors can be seen as individual constructed assets</li>
 <li>We can combine many to create a mega-factor</li>
 <li>Weighting scheme between factors is up to us</li>
@@ -12137,12 +12118,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dynamic-vs.-Static-Aggregation-Methods">Dynamic vs. Static Aggregation Methods<a class="anchor-link" href="#Dynamic-vs.-Static-Aggregation-Methods">&#182;</a></h2><ul>
+<h2 id="Dynamic-vs.-Static-Aggregation-Methods">Dynamic vs. Static Aggregation Methods<a class="anchor-link" href="#Dynamic-vs.-Static-Aggregation-Methods">&#194;&#182;</a></h2><ul>
 <li>Static: Predetermined aggregate factor weighting</li>
 <li>Dynamic: Changing weights based on their own performance</li>
 </ul>
@@ -12150,12 +12130,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#182;</a></h2><ul>
+<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#194;&#182;</a></h2><ul>
 <li>Take all factors</li>
 <li>Standardize them</li>
 <li>Add them together</li>
@@ -12164,42 +12143,38 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#182;</a></h2><p><img src="./images/equal_weighted_factor_portfolio.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
+<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#194;&#182;</a></h2><p><img src="./images/equal_weighted_factor_portfolio.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#182;</a></h2><p><img src="./images/equal_weighted_factor_portfolio_curve.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
+<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#194;&#182;</a></h2><p><img src="./images/equal_weighted_factor_portfolio_curve.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#182;</a></h2><p><img src="./images/equal_weighted_factor_portfolio_fingers.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
+<h2 id="Static-Equal-Weighted-Factor-Portfolio">Static Equal-Weighted Factor Portfolio<a class="anchor-link" href="#Static-Equal-Weighted-Factor-Portfolio">&#194;&#182;</a></h2><p><img src="./images/equal_weighted_factor_portfolio_fingers.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ensemble-Learning">Ensemble Learning<a class="anchor-link" href="#Ensemble-Learning">&#182;</a></h2><ul>
+<h2 id="Ensemble-Learning">Ensemble Learning<a class="anchor-link" href="#Ensemble-Learning">&#194;&#182;</a></h2><ul>
 <li>Obtain better predictive performance by aggregating many learning algorithms</li>
 <li>Very difficult to find a good trading algorithm</li>
 </ul>
@@ -12207,8 +12182,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12219,12 +12193,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Alpha-Factors-as-Classifiers">Alpha Factors as Classifiers<a class="anchor-link" href="#Alpha-Factors-as-Classifiers">&#182;</a></h2><ul>
+<h2 id="Alpha-Factors-as-Classifiers">Alpha Factors as Classifiers<a class="anchor-link" href="#Alpha-Factors-as-Classifiers">&#194;&#182;</a></h2><ul>
 <li>We can reinterpret an alpha factor as a classifier</li>
 <li>Relative value, classified as going up or going down based on predictor<ul>
 <li>High factor values indicate that we expect the value to go up</li>
@@ -12237,12 +12210,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="AdaBoost-(Adaptive-Boosting)">AdaBoost (Adaptive Boosting)<a class="anchor-link" href="#AdaBoost-(Adaptive-Boosting)">&#182;</a></h2>$$ H(x) = sign\left(\sum_{t=1}^T \alpha_t h_t(x)\right) $$<ul>
+<h2 id="AdaBoost-(Adaptive-Boosting)">AdaBoost (Adaptive Boosting)<a class="anchor-link" href="#AdaBoost-(Adaptive-Boosting)">&#194;&#182;</a></h2>$$ H(x) = sign\left(\sum_{t=1}^T \alpha_t h_t(x)\right) $$<ul>
 <li>where each $h_t(x)$ is the output of a weak classifier and $\alpha_t$ is its weight</li>
 <li>Linear combination of classifiers inside a non-linear function</li>
 </ul>
@@ -12250,12 +12222,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Implementation">Implementation<a class="anchor-link" href="#Implementation">&#182;</a></h2><ul>
+<h2 id="Implementation">Implementation<a class="anchor-link" href="#Implementation">&#194;&#182;</a></h2><ul>
 <li>Mask factors into classifiers</li>
 <li>Assume these factors are predictive over a month and predict returns 20 days into the future</li>
 <li>Re-weight individual factors in aggregate based on performance</li>
@@ -12265,12 +12236,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#182;</a></h2><ul>
+<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#194;&#182;</a></h2><ul>
 <li>Build signal in research<ul>
 <li>scikit-learn <code>AdaBoostClassifier</code></li>
 </ul>
@@ -12281,18 +12251,16 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Testing-the-Signal">Testing the Signal<a class="anchor-link" href="#Testing-the-Signal">&#182;</a></h2><p><img src="./images/train.png" alt="AdaBoost Accuracy" style="width: 800px;"/></p>
+<h2 id="Testing-the-Signal">Testing the Signal<a class="anchor-link" href="#Testing-the-Signal">&#194;&#182;</a></h2><p><img src="./images/train.png" alt="AdaBoost Accuracy" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12301,52 +12269,47 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-Importances">Feature Importances<a class="anchor-link" href="#Feature-Importances">&#182;</a></h2><p><img src="./images/feature_importances.png" alt="AdaBoost Features" style="width: 800px;"/></p>
+<h2 id="Feature-Importances">Feature Importances<a class="anchor-link" href="#Feature-Importances">&#194;&#182;</a></h2><p><img src="./images/feature_importances.png" alt="AdaBoost Features" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#182;</a></h2><p><img src="./images/boosted_factor_portfolio.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
+<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#194;&#182;</a></h2><p><img src="./images/boosted_factor_portfolio.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#182;</a></h2><p><img src="./images/boosted_factor_portfolio_curve.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
+<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#194;&#182;</a></h2><p><img src="./images/boosted_factor_portfolio_curve.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#182;</a></h2><p><img src="./images/boosted_factor_portfolio_fingers.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
+<h2 id="Dynamically-Weighted-Signal-with-AdaBoost">Dynamically-Weighted Signal with AdaBoost<a class="anchor-link" href="#Dynamically-Weighted-Signal-with-AdaBoost">&#194;&#182;</a></h2><p><img src="./images/boosted_factor_portfolio_fingers.png" alt="Equal-weighted Portfolio" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Market-Impact">Market Impact<a class="anchor-link" href="#Market-Impact">&#182;</a></h2><ul>
+<h2 id="Market-Impact">Market Impact<a class="anchor-link" href="#Market-Impact">&#194;&#182;</a></h2><ul>
 <li>It is not enough to find a signal<ul>
 <li>Have to check if it is viable</li>
 </ul>
@@ -12358,8 +12321,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12368,22 +12330,20 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-Potential-Culprit">A Potential Culprit<a class="anchor-link" href="#A-Potential-Culprit">&#182;</a></h2><p><img src="./images/boosted_backtest_turnover.png" alt="Boosted factor in the backtester" style="width: 800px;"/></p>
+<h2 id="A-Potential-Culprit">A Potential Culprit<a class="anchor-link" href="#A-Potential-Culprit">&#194;&#182;</a></h2><p><img src="./images/boosted_backtest_turnover.png" alt="Boosted factor in the backtester" style="width: 800px;"/></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limitations-of-Model">Limitations of Model<a class="anchor-link" href="#Limitations-of-Model">&#182;</a></h2><ul>
+<h2 id="Limitations-of-Model">Limitations of Model<a class="anchor-link" href="#Limitations-of-Model">&#194;&#182;</a></h2><ul>
 <li>Garbage in, garbage out<ul>
 <li>Passing in better factors should ideally improve performance</li>
 </ul>
@@ -12399,12 +12359,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Limitations-of-Platform">Limitations of Platform<a class="anchor-link" href="#Limitations-of-Platform">&#182;</a></h2><ul>
+<h2 id="Limitations-of-Platform">Limitations of Platform<a class="anchor-link" href="#Limitations-of-Platform">&#194;&#182;</a></h2><ul>
 <li>Limited training window for ML classifier</li>
 <li>Limited backtest window</li>
 </ul>
@@ -12412,12 +12371,11 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tools">Tools<a class="anchor-link" href="#Tools">&#182;</a></h2><ul>
+<h2 id="Tools">Tools<a class="anchor-link" href="#Tools">&#194;&#182;</a></h2><ul>
 <li>Alphalens: <a href="https://github.com/quantopian/alphalens">https://github.com/quantopian/alphalens</a></li>
 <li>Pyfolio: <a href="https://github.com/quantopian/pyfolio">https://github.com/quantopian/pyfolio</a></li>
 <li>Zipline: <a href="https://github.com/quantopian/zipline">https://github.com/quantopian/zipline</a></li>
@@ -12437,8 +12395,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12455,8 +12412,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12477,8 +12433,8 @@ require(
       waitSeconds: 15
     },
     [
-      "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js",
-      "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.js"
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -12494,9 +12450,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.js",
+                { src: "reveal.js/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.js",
+                { src: "reveal.js/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
