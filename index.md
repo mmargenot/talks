@@ -1,5 +1,3 @@
-# Some of My Projects
-
 ## Slides
 [Thrifting Alpha - Revitalizing Tired Alpha Factors Using Ensemble Learning](Thrifting_Alpha_Talk.slides.html)
 
