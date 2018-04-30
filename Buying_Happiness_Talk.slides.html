@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
+        link.href = 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -11861,7 +11861,7 @@ a.anchor-link {
 <center>
     <h1>Buying Happiness</h1>
 
-    <h2>Turning Words Into Numbers for Maximum Utility</h2>
+    <h2>Using LSTMs to Turn Feelings Into Trades</h2>
     <img src="./images/logo-q-press-logo-red.png" alt="Quantopian" style="width: 200px;"/>
 
     <h4>Max Margenot</h4>
@@ -11941,7 +11941,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_phrases</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Show me the alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;Carthago delenda est&#39;</span><span class="p">,]</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">my_phrases</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Show me the alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;Carthago delenda est&#39;</span><span class="p">,]</span>
 <span class="p">[</span><span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">my_phrases</span><span class="p">]</span>
 </pre></div>
 
@@ -11983,7 +11983,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">phrase</span> 
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">phrase</span> 
  <span class="ow">in</span> <span class="n">my_phrases</span> <span class="k">for</span> <span class="n">word</span>
      <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])]</span>
 </pre></div>
@@ -12030,7 +12030,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;sad&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;sad&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12093,7 +12093,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;sad&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;sad&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12135,7 +12135,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[243]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_embedded_clusters</span><span class="p">(</span><span class="n">dim_red</span><span class="p">,</span> <span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">32</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_embedded_clusters</span><span class="p">(</span><span class="n">dim_red</span><span class="p">,</span> <span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">32</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -15335,7 +15335,7 @@ CS4AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wv_df</span><span class="p">[</span><span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">wv_df</span><span class="p">[</span><span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15754,14 +15754,14 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">MAX_WORDS</span><span class="p">,))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">MAX_WORDS</span><span class="p">,))</span>
 <span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">max_features</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
                             <span class="n">embedding_dim</span><span class="p">,</span>
                             <span class="n">input_length</span><span class="o">=</span><span class="n">MAX_WORDS</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span>
                   <span class="n">dropout</span><span class="o">=</span><span class="n">DROPOUT</span><span class="p">,</span>
                   <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">,</span>
-                  <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">embedding_layer</span><span class="p">)</span>
+                  <span class="n">return_sequences</span><span class="o">=</span><span class="bp">True</span><span class="p">)(</span><span class="n">embedding_layer</span><span class="p">)</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span>
                   <span class="n">dropout</span><span class="o">=</span><span class="n">DROPOUT</span><span class="p">,</span>
                   <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">)(</span><span class="n">lstm_layer</span><span class="p">)</span>
@@ -15891,6 +15891,40 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Risk-Modeling">Risk Modeling<a class="anchor-link" href="#Risk-Modeling">&#194;&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/risk_modeling.png" alt="Risk Modeling" style="width: 800px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Cross-sectional-Equity-Portfolios">Cross-sectional Equity Portfolios<a class="anchor-link" href="#Cross-sectional-Equity-Portfolios">&#194;&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/long_short_equity_toy_example.png" alt="Mean Return Buckets" style="width: 800px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="30-day-Moving-Average-of-Sentiment">30-day Moving Average of Sentiment<a class="anchor-link" href="#30-day-Moving-Average-of-Sentiment">&#194;&#182;</a></h2><p><img src="./images/rolling_sentiment.png" alt="Sentiment Score" style="width: 800px;"/></p>
 
 </div>
@@ -15935,7 +15969,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/sentiment_beta_risk_exposures.png" alt="Risk Exposures" style="width: 800px;"/></p>
+<p><img src="./images/q_risk_model_breakdown.png" alt="Risk Exposures" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -16053,8 +16087,8 @@ require(
       waitSeconds: 15
     },
     [
-      "reveal.js/lib/js/head.min.js",
-      "reveal.js/js/reveal.js"
+      "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js",
+      "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -16070,9 +16104,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "reveal.js/lib/js/classList.js",
+                { src: "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "reveal.js/plugin/notes/notes.js",
+                { src: "http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
