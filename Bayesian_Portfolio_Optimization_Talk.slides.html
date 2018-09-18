@@ -12013,7 +12013,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Modern-Portfolio-Theory">Modern Portfolio Theory<a class="anchor-link" href="#Modern-Portfolio-Theory">&#182;</a></h1><p>A key component of modern finance that seeks to maximize expected return while minimizing risks.</p>
+<h1 id="Modern-Portfolio-Theory">Modern Portfolio Theory<a class="anchor-link" href="#Modern-Portfolio-Theory">&#182;</a></h1><p>A framework for finding portfolios that maximize expected return while minimizing risk.</p>
 
 </div>
 </div>
@@ -12028,23 +12028,56 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.24</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.1</span><span class="p">])</span>
-<span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.41</span><span class="p">,</span> <span class="mf">4.9</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">7.4</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="o">/</span><span class="mi">8</span> <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">mu</span><span class="p">])</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="o">/</span><span class="n">N</span> <span class="k">for</span> <span class="n">asset</span> <span class="ow">in</span> <span class="n">mu</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Asset Returns are: &#39;</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Asset Volatilities are: &#39;</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Asset Returns are:  [0.01128308 0.00909864 0.01244061 0.00890112 0.00887826]
+Asset Volatilities are:  [0.02803311 0.03293182 0.03100948 0.0293683  0.02973995]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Portfolio Return is: &#39;</span><span class="p">,</span> <span class="n">mu</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">weights</span><span class="p">))</span>
@@ -12064,7 +12097,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Portfolio Return is:  0.3375
+<pre>Portfolio Return is:  0.0101203426774652
 </pre>
 </div>
 </div>
@@ -12075,10 +12108,10 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Portfolio Volatility is: &#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">weights</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Portfolio Volatility is: &#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">weights</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
 </pre></div>
 
 </div>
@@ -12095,7 +12128,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Portfolio Volatility is:  1.4574703125000004
+<pre>Portfolio Volatility is:  0.01353352766800903
 </pre>
 </div>
 </div>
@@ -12126,7 +12159,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>$$ VAR[P] = \sum_{i=1}^N \omega_i^2 \sigma_i^2 + \sum_{i=1}^N \sum_{j=1, j\neq i}^N \omega_i\omega_j \sigma_i\sigma_j \rho_{ij}$$</p>
+<p>$$ VAR[P] = \sigma_p^2 = \sum_{i=1}^N \omega_i^2 \sigma_i^2 + \sum_{i=1}^N \sum_{j=1, j\neq i}^N \omega_i\omega_j \sigma_i\sigma_j \rho_{ij}$$</p>
 
 </div>
 </div>
@@ -12145,7 +12178,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can express this as a conventional optimization problem, with objective and constraints</p>
+<p>We can express this as a conventional optimization problem, with objective and constraints.</p>
 
 </div>
 </div>
@@ -12198,7 +12231,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Traditional covariance is unstable</li>
+<li>Traditional covariance is unstable.</li>
 </ul>
 
 </div>
@@ -12209,7 +12242,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Too many observations are necessary to make it stable</li>
+<li>Too many observations are necessary to make it stable.</li>
 </ul>
 
 </div>
@@ -12220,7 +12253,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Correlations change over time</li>
+<li>Correlations change over time.</li>
 </ul>
 
 </div>
@@ -12231,7 +12264,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>There's a Wikipedia article about this, so it must be: <a href="https://en.wikipedia.org/wiki/Estimation_of_covariance_matrices">https://en.wikipedia.org/wiki/Estimation_of_covariance_matrices</a></li>
+<li>There's a Wikipedia article about this, so it must be: <a href="https://en.wikipedia.org/wiki/Estimation_of_covariance_matrices">https://en.wikipedia.org/wiki/Estimation_of_covariance_matrices</a>.</li>
 </ul>
 
 </div>
@@ -12342,21 +12375,6 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Probabilistic-Programming">Probabilistic Programming<a class="anchor-link" href="#Probabilistic-Programming">&#182;</a></h1><p>With this in mind, we set the following priors for our returns and covariance matrix:</p>
-<p>\begin{eqnarray*}
-    R &amp;\sim&amp; MvNormal(0, \Sigma) \\
-    L &amp;\sim&amp; \exp[GaussianRandomWalk(0, 0.1)]\\
-    \Sigma &amp;=&amp; LL^\top
-\end{eqnarray*}</p>
-<p>where $\Sigma = LL^\top$ is the Cholesky decomposition of $\Sigma$.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -12444,6 +12462,21 @@ a.anchor-link {
 </div>
 </div>
 
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Probabilistic-Programming">Probabilistic Programming<a class="anchor-link" href="#Probabilistic-Programming">&#182;</a></h1><p>With this in mind, we set the following priors for our returns and covariance matrix:</p>
+<p>\begin{eqnarray*}
+    R &amp;\sim&amp; MvNormal(0, \Sigma) \\
+    L &amp;\sim&amp; \exp[GaussianRandomWalk(0, 0.1)]\\
+    \Sigma &amp;=&amp; LL^\top
+\end{eqnarray*}</p>
+<p>where $\Sigma = LL^\top$ is the Cholesky decomposition of $\Sigma$.</p>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12767,7 +12800,7 @@ covariance: 1.0003739493094546
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So we have a distribution of portfolios.</p>
+<p>So we have a distribution of possible weights.</p>
 
 </div>
 </div>
@@ -12794,7 +12827,7 @@ covariance: 1.0003739493094546
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Min-Variance-Portfolio">Min-Variance Portfolio<a class="anchor-link" href="#Min-Variance-Portfolio">&#182;</a></h1><p>A variant of Markowitz optimization that disregrads the returns, finding the portolio with minimum variance.</p>
+<h1 id="Min-Variance-Portfolio">Min-Variance Portfolio<a class="anchor-link" href="#Min-Variance-Portfolio">&#182;</a></h1><p>Variant of Markowitz that disregards the returns, finding the portolio with minimum variance.</p>
 
 </div>
 </div>
@@ -13002,8 +13035,10 @@ Bayesian Minimum Variance Weights:  0.0010547085196216746
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#182;</a></h2><p>The model still leaves a few things to be desired.</p>
 <ul>
-<li>Placing a random walk distribution on the Cholesky factors is weird - they don't have a straight-forward relationship to the individual elements in the covariance matrix we actually want to model.</li>
-<li>Prediction with random walks is not very good, a Gaussian process might be better</li>
+<li><p>Placing a random walk distribution on the Cholesky factors is weird - they don't have a straight-forward relationship to the individual elements in the covariance matrix we actually want to model.</p>
+</li>
+<li><p>Prediction with random walks is not very good, a Gaussian process might be better</p>
+</li>
 <li><p>Maybe allow principal components of covariance matrix to change or assume a block structure to reduce dimensionality.</p>
 </li>
 <li><p>Compare against the Ledoit-Wolf Estimator</p>
