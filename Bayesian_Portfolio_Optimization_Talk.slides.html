@@ -12181,6 +12181,7 @@ Asset Volatilities are:  [0.02803311 0.03293182 0.03100948 0.0293683  0.02973995
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Given a set of assets, $\{S_i\}_{i=1}^N$,</p>
 <p>\begin{equation*}
 \begin{aligned}
 &amp; \underset{\omega} {\text{minimize}}
@@ -12189,6 +12190,7 @@ Asset Volatilities are:  [0.02803311 0.03293182 0.03100948 0.0293683  0.02973995
 &amp; &amp; \sum_{i=1}^N \omega_i = 1
 \end{aligned}
 \end{equation*}</p>
+<p>where $R = [R_1, \dots, R_N]$ is the expected returns of each asset $S_i$, with covariance matrix $\Sigma$, $N\times N$.</p>
 
 </div>
 </div>
@@ -12198,7 +12200,7 @@ Asset Volatilities are:  [0.02803311 0.03293182 0.03100948 0.0293683  0.02973995
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>We're still riffing on this</li>
+<li>We're still riffing on this.</li>
 </ul>
 
 </div>
@@ -12645,6 +12647,14 @@ Asset Volatilities are:  [0.02803311 0.03293182 0.03100948 0.0293683  0.02973995
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Trace">Trace<a class="anchor-link" href="#Trace">&#182;</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
@@ -12982,7 +12992,7 @@ Bayes Sharpe: 0.011614755741102979
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean Turnover:&#39;</span><span class="p">)</span>
@@ -13005,8 +13015,8 @@ Bayes Sharpe: 0.011614755741102979
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Mean Turnover:
-Traditional Minimum Variance Weights:  0.001307835978016272
-Bayesian Minimum Variance Weights:  0.0010547085196216746
+Traditional Minimum Variance Weights:  0.013758003734391335
+Bayesian Minimum Variance Weights:  0.009292716474402404
 </pre>
 </div>
 </div>
@@ -13019,21 +13029,32 @@ Bayesian Minimum Variance Weights:  0.0010547085196216746
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#182;</a></h2><p>The model still leaves a few things to be desired.</p>
+<h1 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#182;</a></h1><p>The model still leaves a few things to be desired.</p>
 <ul>
 <li><p>Placing a random walk distribution on the Cholesky factors is weird - they don't have a straight-forward relationship to the individual elements in the covariance matrix we actually want to model.</p>
 </li>
-<li><p>Prediction with random walks is not very good, a Gaussian process might be better</p>
+<li><p>Prediction with random walks is not very good, a Gaussian process might be better.</p>
 </li>
 <li><p>Maybe allow principal components of covariance matrix to change or assume a block structure to reduce dimensionality.</p>
 </li>
-<li><p>Compare against the Ledoit-Wolf Estimator</p>
+<li><p>Compare against the Ledoit-Wolf Estimator instead of sample covariance.</p>
 </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Scalability, in both number of securities and amount of time, is a major problem.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
