@@ -10,3 +10,7 @@ In this talk we discuss how to build a Twitter sentiment model in Python using W
 [Bayesian Portfolio Optimization](Bayesian_Portfolio_Optimization_Talk.slides.html)
 
 Uncertainty quantified as probability is the rock upon which Bayesian inference is built. The instability of sample covariance matrices leads to major problems in Markowitz portfolio optimization. In this talk, we use probabilistic programming to compute probability distributions on the covariance of a set of assets. This yields a more robust estimate of their variation and adds uncertainty into how we calculate weights for a portfolio of assets.
+
+
+[Factor Modeling](Factor_Modeling_Talk.slides.html)
+A common technique in quantitative finance is that of ranking stocks by using a combination of fundamental factors and price-based signals. The resulting factors can be used for many purposes, from cross-sectional equity models to performance attribution. In this talk we will discuss factor models and how they fit into a common quantitative workflow.
