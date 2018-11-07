@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+<link rel="stylesheet" href="./reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
+        link.href = './reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
+<script src="./reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -11776,7 +11776,6 @@ ul.typeahead-list > li > a {
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -11806,6 +11805,41 @@ ul.typeahead-list > li > a {
 }
 .reveal .progress {
   position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
 }
 div.input_area {
   padding: 0.06em;
@@ -11840,6 +11874,19 @@ a.anchor-link {
 .rendered_html p {
   text-align: inherit;
 }
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
+}
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
@@ -11860,12 +11907,10 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <center>
     <h1>Buying Happiness</h1>
-
-    <h2>Using LSTMs to Turn Feelings Into Trades</h2>
-    <img src="./images/logo-q-press-logo-red.png" alt="Happiness" style="width: 400px;"/>
-
+    <h2>Using Word2Vec to Turn Feelings Into Trades</h2>
+    <img src="./images/comedy_tragedy.png" alt="Happiness" style="width: 400px;">
     <h4>Max Margenot</h4>
-    <h4>Lead - Data Science/Academia at Quantopian</h4>
+    <h4>Lead Data Scientist at Quantopian</h4>
 </center>
 </div>
 </div>
@@ -11883,7 +11928,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Background">Background<a class="anchor-link" href="#Background">&#194;&#182;</a></h1><ul>
+<h1 id="Background">Background<a class="anchor-link" href="#Background">&#182;</a></h1><ul>
 <li>Me</li>
 </ul>
 
@@ -11894,10 +11939,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Natural-Language-Processing-(NLP)">Natural Language Processing (NLP)<a class="anchor-link" href="#Natural-Language-Processing-(NLP)">&#194;&#182;</a></h2><ul>
-<li>Computer science and linguistics tools to interpret human language and text</li>
-<li>Allows us to quantify unstructured text</li>
-</ul>
+<h1 id="Unstructured-Data">Unstructured Data<a class="anchor-link" href="#Unstructured-Data">&#182;</a></h1><p>Key source of "alpha"</p>
 
 </div>
 </div>
@@ -11906,15 +11948,17 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Processing">Data Processing<a class="anchor-link" href="#Data-Processing">&#194;&#182;</a></h2>
+<h1 id="Natural-Language-Processing-(NLP)">Natural Language Processing (NLP)<a class="anchor-link" href="#Natural-Language-Processing-(NLP)">&#182;</a></h1><p>Computer science and linguistics tools to interpret human language and text</p>
+<p>Allows us to quantify unstructured text</p>
+
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
+<h1 id="Data-Processing">Data Processing<a class="anchor-link" href="#Data-Processing">&#182;</a></h1><ul>
 <li>Stopwords</li>
 <li>Stemming</li>
 <li>Tokenization</li>
@@ -11927,7 +11971,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-Generation">Feature Generation<a class="anchor-link" href="#Feature-Generation">&#194;&#182;</a></h2>
+<h1 id="Feature-Generation">Feature Generation<a class="anchor-link" href="#Feature-Generation">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -11935,7 +11979,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Bag-of-Words">Bag of Words<a class="anchor-link" href="#Bag-of-Words">&#194;&#182;</a></h3>
+<h2 id="Bag-of-Words">Bag of Words<a class="anchor-link" href="#Bag-of-Words">&#182;</a></h2>
 </div>
 </div>
 </div></div><div class="fragment">
@@ -11943,7 +11987,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Unigrams">Unigrams<a class="anchor-link" href="#Unigrams">&#194;&#182;</a></h4>
+<h3 id="Unigrams">Unigrams<a class="anchor-link" href="#Unigrams">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11952,7 +11996,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">my_phrases</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Show me the alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;Carthago delenda est&#39;</span><span class="p">,]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_phrases</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Show me the alpha&#39;</span><span class="p">,</span> <span class="s1">&#39;Carthago delenda est&#39;</span><span class="p">,]</span>
 <span class="p">[</span><span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">phrase</span> <span class="ow">in</span> <span class="n">my_phrases</span><span class="p">]</span>
 </pre></div>
 
@@ -11985,7 +12029,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Bigrams">Bigrams<a class="anchor-link" href="#Bigrams">&#194;&#182;</a></h4>
+<h3 id="Bigrams">Bigrams<a class="anchor-link" href="#Bigrams">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11994,7 +12038,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">phrase</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">phrase</span> 
  <span class="ow">in</span> <span class="n">my_phrases</span> <span class="k">for</span> <span class="n">word</span>
      <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">phrase</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])]</span>
 </pre></div>
@@ -12032,7 +12076,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-Generation">Feature Generation<a class="anchor-link" href="#Feature-Generation">&#194;&#182;</a></h2><h3 id="Word-Embeddings">Word Embeddings<a class="anchor-link" href="#Word-Embeddings">&#194;&#182;</a></h3>
+<h1 id="Feature-Generation">Feature Generation<a class="anchor-link" href="#Feature-Generation">&#182;</a></h1><h2 id="Word-Embeddings">Word Embeddings<a class="anchor-link" href="#Word-Embeddings">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
@@ -12041,7 +12085,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;sad&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="s1">&#39;sad&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12095,7 +12139,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-Generation">Feature Generation<a class="anchor-link" href="#Feature-Generation">&#194;&#182;</a></h2><h3 id="Word-Embeddings">Word Embeddings<a class="anchor-link" href="#Word-Embeddings">&#194;&#182;</a></h3>
+<h1 id="Feature-Generation">Feature Generation<a class="anchor-link" href="#Feature-Generation">&#182;</a></h1><h2 id="Word-Embeddings">Word Embeddings<a class="anchor-link" href="#Word-Embeddings">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12104,7 +12148,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;sad&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">w2v</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">most_similar</span><span class="p">(</span><span class="s1">&#39;sad&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12146,7 +12190,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[243]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">plot_embedded_clusters</span><span class="p">(</span><span class="n">dim_red</span><span class="p">,</span> <span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">32</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_embedded_clusters</span><span class="p">(</span><span class="n">dim_red</span><span class="p">,</span> <span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">32</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -15346,7 +15390,7 @@ CS4AAAAASUVORK5CYII=
 <div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">wv_df</span><span class="p">[</span><span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wv_df</span><span class="p">[</span><span class="n">clustered_wv_df</span><span class="o">.</span><span class="n">labels_</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -15542,10 +15586,10 @@ CS4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Data">The Data<a class="anchor-link" href="#The-Data">&#194;&#182;</a></h2>
+<h1 id="The-Data">The Data<a class="anchor-link" href="#The-Data">&#182;</a></h1>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -15553,14 +15597,12 @@ CS4AAAAASUVORK5CYII=
 <center><img src="./images/twitter_logo.png"></center>
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sentiment140">Sentiment140<a class="anchor-link" href="#Sentiment140">&#194;&#182;</a></h2><ul>
-<li>Twitter sentiment dataset</li>
-</ul>
+<h1 id="Sentiment140">Sentiment140<a class="anchor-link" href="#Sentiment140">&#182;</a></h1><p>Twitter sentiment dataset</p>
 
 </div>
 </div>
@@ -15569,7 +15611,7 @@ CS4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="My-Approach">My Approach<a class="anchor-link" href="#My-Approach">&#194;&#182;</a></h2>
+<h1 id="My-Approach">My Approach<a class="anchor-link" href="#My-Approach">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -15577,9 +15619,7 @@ CS4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Logistic Regression with Bag of Words</li>
-</ul>
+<p>Logistic Regression with Bag of Words</p>
 
 </div>
 </div>
@@ -15588,9 +15628,7 @@ CS4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Neural Network with Word Embeddings</li>
-</ul>
+<p>Neural Network with Word Embeddings</p>
 
 </div>
 </div>
@@ -15599,7 +15637,7 @@ CS4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#194;&#182;</a></h2>
+<h1 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15607,10 +15645,11 @@ CS4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-\begin{eqnarray}
+<p>\begin{eqnarray}
 g(X) &amp;=&amp; \alpha + \beta_0 X_0 + \cdots + \beta_n X_N \\
 F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
-\end{eqnarray}
+\end{eqnarray}</p>
+
 </div>
 </div>
 </div><div class="fragment">
@@ -15618,10 +15657,16 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Friendly, familiar linear model</li>
-<li>Easy to interpret and understand</li>
-</ul>
+<p>Friendly, familiar linear model</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Easy to interpret and understand</p>
 
 </div>
 </div>
@@ -15630,7 +15675,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Logistic-Regression-Coefficients">Logistic Regression Coefficients<a class="anchor-link" href="#Logistic-Regression-Coefficients">&#194;&#182;</a></h2><center>
+<h1 id="Logistic-Regression-Coefficients">Logistic Regression Coefficients<a class="anchor-link" href="#Logistic-Regression-Coefficients">&#182;</a></h1><center>
 <img src="./images/logistic_regression_coefficients.png" alt="logistic_regression_coefficients" style="width:800px;"/>
 </center>
 </div>
@@ -15640,7 +15685,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Results">Results<a class="anchor-link" href="#Results">&#194;&#182;</a></h2>
+<h1 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -15666,7 +15711,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#194;&#182;</a></h2>
+<h1 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15684,7 +15729,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#194;&#182;</a></h2>
+<h1 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15702,7 +15747,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Recurrent-Neural-Networks">Recurrent Neural Networks<a class="anchor-link" href="#Recurrent-Neural-Networks">&#194;&#182;</a></h2>
+<h1 id="Recurrent-Neural-Networks">Recurrent Neural Networks<a class="anchor-link" href="#Recurrent-Neural-Networks">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15720,22 +15765,25 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Recurrent-Neural-Networks">Recurrent Neural Networks<a class="anchor-link" href="#Recurrent-Neural-Networks">&#194;&#182;</a></h2><ul>
-<li>Recurrent neural networks good for text processing</li>
-<li>View sentences as sequences of words<ul>
-<li>Similar to time series structure</li>
-</ul>
-</li>
-</ul>
+<h1 id="Recurrent-Neural-Networks">Recurrent Neural Networks<a class="anchor-link" href="#Recurrent-Neural-Networks">&#182;</a></h1><p>Recurrent neural networks good for text processing</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Long-Short-term-Memory-Networks">Long Short-term Memory Networks<a class="anchor-link" href="#Long-Short-term-Memory-Networks">&#194;&#182;</a></h2>
+<p>View sentences as sequences of words (similar to time series structure)</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Long-Short-term-Memory-Networks">Long Short-term Memory Networks<a class="anchor-link" href="#Long-Short-term-Memory-Networks">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15753,9 +15801,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Long-Short-term-Memory-Networks">Long Short-term Memory Networks<a class="anchor-link" href="#Long-Short-term-Memory-Networks">&#194;&#182;</a></h2><ul>
-<li>In Keras this is simple to implement</li>
-</ul>
+<h1 id="Long-Short-term-Memory-Networks">Long Short-term Memory Networks<a class="anchor-link" href="#Long-Short-term-Memory-Networks">&#182;</a></h1><p>In Keras this is simple to implement</p>
 
 </div>
 </div>
@@ -15765,14 +15811,14 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">MAX_WORDS</span><span class="p">,))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_layer</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">MAX_WORDS</span><span class="p">,))</span>
 <span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">Embedding</span><span class="p">(</span><span class="n">max_features</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
                             <span class="n">embedding_dim</span><span class="p">,</span>
                             <span class="n">input_length</span><span class="o">=</span><span class="n">MAX_WORDS</span><span class="p">)(</span><span class="n">input_layer</span><span class="p">)</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span>
                   <span class="n">dropout</span><span class="o">=</span><span class="n">DROPOUT</span><span class="p">,</span>
                   <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">,</span>
-                  <span class="n">return_sequences</span><span class="o">=</span><span class="bp">True</span><span class="p">)(</span><span class="n">embedding_layer</span><span class="p">)</span>
+                  <span class="n">return_sequences</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">embedding_layer</span><span class="p">)</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">LSTM</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span>
                   <span class="n">dropout</span><span class="o">=</span><span class="n">DROPOUT</span><span class="p">,</span>
                   <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;tanh&#39;</span><span class="p">)(</span><span class="n">lstm_layer</span><span class="p">)</span>
@@ -15790,7 +15836,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Results">Results<a class="anchor-link" href="#Results">&#194;&#182;</a></h2>
+<h1 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -15818,9 +15864,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-Compute-A-Signal?">How to Compute A Signal?<a class="anchor-link" href="#How-to-Compute-A-Signal?">&#194;&#182;</a></h2><ul>
-<li>Hypothesis: POTUS's tweets affect the market</li>
-</ul>
+<h1 id="How-to-Compute-A-Signal?">How to Compute A Signal?<a class="anchor-link" href="#How-to-Compute-A-Signal?">&#182;</a></h1><p>Hypothesis: POTUS's tweets affect the market</p>
 
 </div>
 </div>
@@ -15829,7 +15873,7 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Precedent">Precedent<a class="anchor-link" href="#Precedent">&#194;&#182;</a></h2>
+<h1 id="Precedent">Precedent<a class="anchor-link" href="#Precedent">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -15837,13 +15881,11 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Trump2Cash: <a href="https://github.com/maxbbraun/trump2cash">https://github.com/maxbbraun/trump2cash</a></p>
 <ul>
-<li>Trump2Cash: <a href="https://github.com/maxbbraun/trump2cash">https://github.com/maxbbraun/trump2cash</a><ul>
 <li>Waits for the president to mention publicly-traded companies</li>
 <li>Uses sentiment analysis to determine positivity or negativity</li>
 <li>Enters long or short positions based on sentiment</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -15853,13 +15895,11 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>BOTUS: <a href="https://twitter.com/botus">https://twitter.com/botus</a></p>
 <ul>
-<li>BOTUS: <a href="https://twitter.com/botus">https://twitter.com/botus</a><ul>
 <li>Waits for the president to mention publicly-traded companies</li>
 <li>Uses sentiment analysis to determine positivity or negativity</li>
 <li>Enters long or short positions based on sentiment</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -15869,13 +15909,11 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Trump &amp; Dump: <a href="https://www.t-3.com/work/the-trump-and-dump-bot-analyze-tweets-short-stocks-save-puppies-all-in-seconds">https://www.t-3.com/work/the-trump-and-dump-bot-analyze-tweets-short-stocks-save-puppies-all-in-seconds</a></p>
 <ul>
-<li>Trump &amp; Dump: <a href="https://www.t-3.com/work/the-trump-and-dump-bot-analyze-tweets-short-stocks-save-puppies-all-in-seconds">https://www.t-3.com/work/the-trump-and-dump-bot-analyze-tweets-short-stocks-save-puppies-all-in-seconds</a><ul>
 <li>Waits for the president to mention publicly-traded companies</li>
 <li>Uses sentiment analysis to determine positivity or negativity</li>
 <li>Enters short positions based if sentiment is negative</li>
-</ul>
-</li>
 </ul>
 
 </div>
@@ -15885,16 +15923,13 @@ F(X) &amp;=&amp; \frac{1}{1 + e^{-g(X)}}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Factor-Models">Factor Models<a class="anchor-link" href="#Factor-Models">&#194;&#182;</a></h1><ul>
-<li>CAPM</li>
-</ul>
-$$ r_p = \alpha + \beta_{m} r_{m} $$<ul>
-<li>Fama-French Factors</li>
-</ul>
-$$ r_p = \alpha + \beta_{m} r_{m} + \beta_{hml} r_{hml} + \beta_{smb} r_{smb} $$<ul>
-<li>Alternative Factors</li>
-</ul>
-$$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
+<h1 id="Factor-Models">Factor Models<a class="anchor-link" href="#Factor-Models">&#182;</a></h1><p>CAPM</p>
+<p>$$ r_p = \alpha + \beta_{m} r_{m} $$</p>
+<p>Fama-French Factors</p>
+<p>$$ r_p = \alpha + \beta_{m} r_{m} + \beta_{hml} r_{hml} + \beta_{smb} r_{smb} $$</p>
+<p>Alternative Factors</p>
+<p>$$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$</p>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -15902,7 +15937,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Risk-Modeling">Risk Modeling<a class="anchor-link" href="#Risk-Modeling">&#194;&#182;</a></h1>
+<h1 id="Risk-Modeling">Risk Modeling<a class="anchor-link" href="#Risk-Modeling">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15919,7 +15954,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cross-sectional-Equity-Portfolios">Cross-sectional Equity Portfolios<a class="anchor-link" href="#Cross-sectional-Equity-Portfolios">&#194;&#182;</a></h1>
+<h1 id="Cross-sectional-Equity-Portfolios">Cross-sectional Equity Portfolios<a class="anchor-link" href="#Cross-sectional-Equity-Portfolios">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15936,7 +15971,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="30-day-Moving-Average-of-Sentiment">30-day Moving Average of Sentiment<a class="anchor-link" href="#30-day-Moving-Average-of-Sentiment">&#194;&#182;</a></h2><p><img src="./images/rolling_sentiment.png" alt="Sentiment Score" style="width: 800px;"/></p>
+<h2 id="Average-Sentiment-Each-Day">Average Sentiment Each Day<a class="anchor-link" href="#Average-Sentiment-Each-Day">&#182;</a></h2><p><img src="./images/daily_trump_sentiment.png" alt="Sentiment Score" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -15945,7 +15980,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sentiment-Exposure-Signal">Sentiment Exposure Signal<a class="anchor-link" href="#Sentiment-Exposure-Signal">&#194;&#182;</a></h2><p><img src="./images/return_buckets.png" alt="Mean Return Buckets" style="width: 800px;"/></p>
+<h2 id="Sentiment-Exposure-Signal">Sentiment Exposure Signal<a class="anchor-link" href="#Sentiment-Exposure-Signal">&#182;</a></h2><p><img src="./images/returns_buckets_trump.png" alt="Mean Return Buckets" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -15954,7 +15989,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sentiment-Exposure-Signal">Sentiment Exposure Signal<a class="anchor-link" href="#Sentiment-Exposure-Signal">&#194;&#182;</a></h2><p><img src="./images/cumulative_return.png" alt="Cumulative Returns" style="width: 800px;"/></p>
+<h2 id="Sentiment-Exposure-Signal">Sentiment Exposure Signal<a class="anchor-link" href="#Sentiment-Exposure-Signal">&#182;</a></h2><p><img src="./images/cumulative_return_trump.png" alt="Cumulative Returns" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -15963,7 +15998,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sentiment-Exposure-Signal">Sentiment Exposure Signal<a class="anchor-link" href="#Sentiment-Exposure-Signal">&#194;&#182;</a></h2><p><img src="./images/cumulative_return_buckets.png" alt="Cumulative Return Buckets" style="width: 800px;"/></p>
+<h2 id="Sentiment-Exposure-Signal">Sentiment Exposure Signal<a class="anchor-link" href="#Sentiment-Exposure-Signal">&#182;</a></h2><p><img src="./images/cumulative_return_quantiles_trump.png" alt="Cumulative Return Buckets" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -15972,7 +16007,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Risk-Analysis">Risk Analysis<a class="anchor-link" href="#Risk-Analysis">&#194;&#182;</a></h2>
+<h2 id="Performance-Attribution">Performance Attribution<a class="anchor-link" href="#Performance-Attribution">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15980,7 +16015,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/q_risk_model_breakdown.png" alt="Risk Exposures" style="width: 800px;"/></p>
+<p><img src="./images/risk_exposures_trump.png" alt="Risk Exposures" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -15989,7 +16024,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Returns-Breakdown">Returns Breakdown<a class="anchor-link" href="#Returns-Breakdown">&#194;&#182;</a></h2>
+<h2 id="Performance-Attribution">Performance Attribution<a class="anchor-link" href="#Performance-Attribution">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15997,7 +16032,25 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/returns_breakdown.png" alt="Common and Specific Returns" style="width: 800px;"/></p>
+<center>
+<img src="./images/summary_stats_trump.png" alt="Common and Specific Returns" style="width: 250px;"/>
+</center>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Performance-Attribution">Performance Attribution<a class="anchor-link" href="#Performance-Attribution">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/returns_decomp_trump.png" alt="Common and Specific Returns" style="width: 800px;"/></p>
 
 </div>
 </div>
@@ -16006,29 +16059,13 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Returns-Breakdown">Returns Breakdown<a class="anchor-link" href="#Returns-Breakdown">&#194;&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/returns_breakdown_cumulative.png" alt="Common and Specific Returns" style="width: 800px;"/></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#194;&#182;</a></h2><h3 id="Sentiment-Model">Sentiment Model<a class="anchor-link" href="#Sentiment-Model">&#194;&#182;</a></h3><ul>
+<h2 id="Possible-Improvements">Possible Improvements<a class="anchor-link" href="#Possible-Improvements">&#182;</a></h2><h3 id="Sentiment-Model">Sentiment Model<a class="anchor-link" href="#Sentiment-Model">&#182;</a></h3><ul>
 <li>Lemmatization instead of Stemming</li>
 <li>Sense2Vec</li>
 </ul>
-<h3 id="The-Signal">The Signal<a class="anchor-link" href="#The-Signal">&#194;&#182;</a></h3><ul>
-<li>Smarter smoothing methodology than moving average</li>
+<h3 id="The-Signal">The Signal<a class="anchor-link" href="#The-Signal">&#182;</a></h3><ul>
+<li>More sophisticated factor than beta exposure to sentiment</li>
+<li>Perhaps using it as a pure risk factor rather than an alpha factor</li>
 </ul>
 
 </div>
@@ -16038,7 +16075,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tools">Tools<a class="anchor-link" href="#Tools">&#194;&#182;</a></h2><ul>
+<h2 id="Tools">Tools<a class="anchor-link" href="#Tools">&#182;</a></h2><ul>
 <li>Natural Language Toolkit (NLTK): <a href="http://www.nltk.org/">http://www.nltk.org/</a></li>
 <li>scikit-learn: <a href="https://github.com/scikit-learn/scikit-learn">https://github.com/scikit-learn/scikit-learn</a></li>
 <li>Gensim: <a href="https://github.com/RaRe-Technologies/gensim">https://github.com/RaRe-Technologies/gensim</a></li>
@@ -16050,7 +16087,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 <li>Quantopian Lecture Series: <a href="https://quantopian.com/lectures">https://quantopian.com/lectures</a></li>
 <li>Quantopian Research: <a href="https://quantopian.com/research">https://quantopian.com/research</a></li>
 </ul>
-<h2 id="References">References<a class="anchor-link" href="#References">&#194;&#182;</a></h2><ul>
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
 <li>Go, A., Bhayani, R. and Huang, L., 2009. Twitter sentiment classification using distant supervision. CS224N Project Report, Stanford, 1(2009), p.12.<ul>
 <li><a href="http://www.sentiment140.com/">http://www.sentiment140.com/</a></li>
 </ul>
@@ -16085,7 +16122,7 @@ $$ r_p = \alpha + \beta_0 r_0 + \cdots + \beta_n r_n $$
 
 </div>
 </div>
-</div></section></section>
+</div>
 </div>
 </div>
 
@@ -16098,8 +16135,8 @@ require(
       waitSeconds: 15
     },
     [
-      "reveal.js/lib/js/head.min.js",
-      "reveal.js/js/reveal.js"
+      "./reveal.js/lib/js/head.min.js",
+      "./reveal.js/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -16110,14 +16147,13 @@ require(
             progress: true,
             history: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            transition: "slide",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "reveal.js/lib/js/classlist.js",
+                { src: "./reveal.js/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "reveal.js/plugin/notes/notes.js",
+                { src: "./reveal.js/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
@@ -16131,13 +16167,25 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-        Reveal.addEventListener('slidechanged', update_scroll);
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
     }
+
 );
 </script>
 
